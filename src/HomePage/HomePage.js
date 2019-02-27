@@ -87,8 +87,6 @@ class HomePage extends React.Component {
                             ) }
                         </Slider>
                     </div>
-                    
-      
                 </section>
             </div>
             
