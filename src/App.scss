@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Poiret+One');
-@import url('https://fonts.googleapis.com/css?family=Arsenal');
-
 .App {
   text-align: center;
+  .slick-prev:before, .slick-next:before {
+    color: #8a8a8a;
+    font-size: 26px;
+  }
 }
+

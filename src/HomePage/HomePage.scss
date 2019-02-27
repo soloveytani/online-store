@@ -40,13 +40,20 @@
     }
 }
 
+.hp-section-label {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+    color: #3a2866;
+}
+
 .hp-products-section {
     height: 250px;
 }
 
 .products-list {
-    overflow-x: auto;
-    overflow: hidden;
+    
 }
 
 .phone-info-card {
@@ -58,7 +65,7 @@
     font-family: arial,sans-serif;
     margin: 20px 10px;
     img {
-        margin: 8px 0;
+        margin: 8px auto 12px;
         width: 140px;
         height: 140px;
     }
