@@ -1,0 +1,78 @@
+.hp-header {
+    font-family: 'Arsenal', sans-serif;
+    background-color: #282c34;
+    height: 100px;
+    color: white;
+    position: relative;
+    text-align: right;
+    p {
+        margin: 0;
+    }
+}
+
+.hp-standart-width {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hp-logo {
+    height: 50px;
+    vertical-align: middle;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+
+.hp-phone-panel {
+    font-family: 'Poiret One', cursive;
+    img {
+        max-height: 900px;
+        max-width: 100vw;
+    }
+    background-color: #f2f2f2;
+    .hp-take-yours {
+        font-size: 2em;
+        text-align: left;
+        margin-top: -30px;
+        padding: 10px;
+        color: #3a2866;
+    }
+}
+
+.hp-products-section {
+    height: 250px;
+}
+
+.products-list {
+    overflow-x: auto;
+    overflow: hidden;
+}
+
+.phone-info-card {
+    border: 1px solid rgba(0,0,0,0.04);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.02), 0 1px 2px 0 rgba(0,0,0,0.08);
+    border-radius: 2px;
+    width: 220px;
+    display: inline-block;
+    font-family: arial,sans-serif;
+    margin: 20px 10px;
+    img {
+        margin: 8px 0;
+        width: 140px;
+        height: 140px;
+    }
+    p {
+        margin: 6px 8px;
+        text-align: left;
+        color: #282c34;
+    }
+    .gray-tip {
+        color: #6b6b6b;
+        font-size: 0.8em;
+    }
+    .bold-tip {
+        color: #026ed1;
+        font-weight: bold;
+    }
+}
