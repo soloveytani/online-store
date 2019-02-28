@@ -3,6 +3,7 @@ import './HomePage.scss';
 import IPhone from './i_love_phone.svg';
 import PhonePanel from './maxresdefault.jpg';
 import Slider from "react-slick";
+import benefitImage from './iPhone-User.png';
 
 const iphone8 = {
     imgUrl: 'https://img.mvideo.ru/Pdb/30030153b.jpg',
@@ -57,6 +58,20 @@ const Card = (props) => (
     </div>
 );
 
+const ProductsSection = (props) => (
+    <section className="hp-products-section">
+        <div className="hp-standart-width hp-section-label">{ props.title }</div>
+        <div className="hp-separator"></div>
+        <div className="hp-standart-width products-list">
+            <Slider {...props.settings}>
+                { props.phoneData.map((value, index) =>
+                    <Card phoneInfo={ value } key={index}/> 
+                ) }
+            </Slider>
+        </div>
+    </section>
+);
+
 class HomePage extends React.Component {
     render() {
         var settings = {
@@ -65,7 +80,7 @@ class HomePage extends React.Component {
             speed: 500,
             slidesToShow: 4,
             slidesToScroll: 4
-          };
+        };
         return (
             <div>   
                 <header className="hp-header">
@@ -78,16 +93,39 @@ class HomePage extends React.Component {
                     <img src={ PhonePanel } alt=""/>
                     <div className="hp-standart-width hp-take-yours">Возьми своё, не стесняйся</div>
                 </section>
-                <section className="hp-products-section">
-                    <div className="hp-standart-width hp-section-label">Самые популярные продукты</div>
-                    <div className="hp-standart-width products-list">
-                        <Slider {...settings}>
-                            { samplePhones.map((value, index) =>
-                                <Card phoneInfo={ value } key={index}/> 
-                            ) }
-                        </Slider>
+                <ProductsSection settings={ settings } title="Самые популярные продукты" phoneData={ samplePhones }/>
+                <section className="hp-benefits-section">
+                    <div className="hp-standart-width hp-section-label">Наши преимущества</div>
+                    <div className="hp-separator"></div>
+                    <div className="hp-standart-width">
+                        <div className="hp-benefits-container">
+                            <p>
+                                Компания ILovePhone работает на рынке сотовой связи и аксессуаров с 2016 года. 
+                                Мы предлагаем нашим покупателям самый широкий ассортимент мобильных телефонов, 
+                                смартфонов, планшетов и гаджетов. В нашем магазине представлены 
+                                самые популярные модели аппаратов от ведущих мировых марок: Apple, Samsung, Xiaomi, 
+                                Sony, LG, HTC, One Plus, Meizu и др.
+                            </p>
+                            <div className="half-width">
+                                <img src={ benefitImage } alt=""/>
+                            </div>
+                            <div className="half-width">
+                                <ul>
+                                    <li>Мы всегда поможем сделать правильный выбор смартфона или планшета из нашего каталога, 
+                                        который регулярно пополняется новинками рынка сотовой связи
+                                    </li>
+                                    <li>В дополнении к привлекательным ценам на продукцию, мы также предоставляем дополнительные 
+                                        скидки и акции на множество моделей
+                                    </li>
+                                    <li>Вы можете купить понравившийся товар круглосуточно, 
+                                        приём заказов в интернет-магазине осуществляется 24 часа в сутки
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </section>
+                <ProductsSection settings={ settings } title="Apple" phoneData={ samplePhones }/>
             </div>
             
         );

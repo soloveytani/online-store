@@ -45,15 +45,55 @@
     font-size: 1.5em;
     text-align: center;
     padding: 10px;
-    color: #3a2866;
 }
 
 .hp-products-section {
-    height: 250px;
+    .hp-section-label {
+        color: #3a2866;
+    }
 }
 
-.products-list {
-    
+.hp-products-section {
+    padding: 20px 0 50px;
+}
+
+.hp-benefits-section {
+    background-color: #535558;
+    padding: 20px 0;
+    color: #f2f2f2;
+}
+
+.hp-benefits-container {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+    p {
+        font-size: 0.8em;
+        max-width: 650px;
+        margin: 1.2em auto;
+    }
+    img {
+        max-width: 100%;
+    }
+    .half-width {
+        vertical-align: top;
+        text-align: left;
+    }
+    li {
+        margin: 1em 0;
+    }
+}
+
+.hp-separator {
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(to right, #fbbfb5, #68a1f0);
+    margin: 6px auto;
+}
+
+.half-width {
+    display: inline-block;
+    max-width: calc(50% - 10px);
 }
 
 .phone-info-card {
