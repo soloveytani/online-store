@@ -10,6 +10,18 @@
     }
 }
 
+.hp-footer {
+    font-family: 'Arsenal', sans-serif;
+    background-color: #282c34;
+    height: 100px;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    p {
+        margin: 0;
+    }
+}
+
 .hp-standart-width {
     max-width: 1280px;
     margin: 0 auto;

@@ -4,50 +4,9 @@ import IPhone from './i_love_phone.svg';
 import PhonePanel from './maxresdefault.jpg';
 import Slider from "react-slick";
 import benefitImage from './iPhone-User.png';
-
-const iphone8 = {
-    imgUrl: 'https://img.mvideo.ru/Pdb/30030153b.jpg',
-    name: 'Iphone 8',
-    description: '64 gb Gold (MQ6J2RU/A)',
-    cost: '44990 руб.'
-}
-
-const iphoneXSMax = {
-    imgUrl: 'https://img.mvideo.ru/Pdb/30040031b.jpg',
-    name: 'Iphone XS Max',
-    description: '512GB Gold (MT582RU/A)',
-    cost: '117990 руб.'
-}
-
-const iphoneXRY = {
-    imgUrl: 'https://img.mvideo.ru/Pdb/30040041b.jpg',
-    name: 'iPhone XR',
-    description: '128GB Yellow (MRYF2RU/A)',
-    cost: '64990 руб.'
-}
-
-const iphoneXRC = {
-    imgUrl: 'https://img.mvideo.ru/Pdb/30039935b.jpg',
-    name: 'iPhone XR',
-    description: '256GB Coral (MRYP2RU/A)',
-    cost: '70990 руб.'
-}
-
-const iphoneX = {
-    imgUrl: 'https://img.mvideo.ru/Pdb/30030163b.jpg',
-    name: 'iPhone X',
-    description: '64GB Space Gray (MQAC2RU/A)',
-    cost: '63990 руб.'
-}
-
-const samplePhones = [
-    iphone8,
-    iphoneXSMax,
-    iphoneXRY,
-    iphoneXRC,
-    iphoneX,
-    iphone8
-];
+import applePhones from './data/apple'
+import samsungPhones from './data/samsung';
+import honorPhones from './data/honor';
 
 const Card = (props) => (
     <div className="phone-info-card">
@@ -86,14 +45,13 @@ class HomePage extends React.Component {
                 <header className="hp-header">
                     <div className="hp-standart-width">
                         <img src={ IPhone } alt="IPhone" className="hp-logo"/>
-                        <p>Contacts: +7 (911) 555-55-55</p>
                     </div>
                 </header>
                 <section className="hp-phone-panel">
                     <img src={ PhonePanel } alt=""/>
                     <div className="hp-standart-width hp-take-yours">Возьми своё, не стесняйся</div>
                 </section>
-                <ProductsSection settings={ settings } title="Самые популярные продукты" phoneData={ samplePhones }/>
+                <ProductsSection settings={ settings } title="Самые популярные продукты" phoneData={ applePhones }/>
                 <section className="hp-benefits-section">
                     <div className="hp-standart-width hp-section-label">Наши преимущества</div>
                     <div className="hp-separator"></div>
@@ -125,7 +83,12 @@ class HomePage extends React.Component {
                         </div>
                     </div>
                 </section>
-                <ProductsSection settings={ settings } title="Apple" phoneData={ samplePhones }/>
+                <ProductsSection settings={ settings } title="Apple" phoneData={ applePhones }/>
+                <ProductsSection settings={ settings } title="Samsung" phoneData={ samsungPhones }/>
+                <ProductsSection settings={ settings } title="Honor" phoneData={ honorPhones }/>
+                <footer className="hp-footer">
+                    <p>Contacts: +7 (911) 555-55-55</p>
+                </footer>
             </div>
             
         );
