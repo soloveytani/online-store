@@ -1,6 +1,7 @@
 import React from 'react';
 import './HomePage.scss';
 import IPhone from './i_love_phone.svg';
+import LogoStore from './store-icon.svg';
 import PhonePanel from './maxresdefault.jpg';
 import Slider from "react-slick";
 import benefitImage from './iPhone-User.png';
@@ -49,7 +50,7 @@ class HomePage extends React.Component {
                 </header>
                 <section className="hp-phone-panel">
                     <img src={ PhonePanel } alt=""/>
-                    <div className="hp-standart-width hp-take-yours">Возьми своё, не стесняйся</div>
+                    <div className="hp-standart-width hp-take-yours">Знакомься с семейством современных телефонов</div>
                 </section>
                 <ProductsSection settings={ settings } title="Самые популярные продукты" phoneData={ applePhones }/>
                 <section className="hp-benefits-section">
@@ -86,6 +87,7 @@ class HomePage extends React.Component {
                 <ProductsSection settings={ settings } title="Apple" phoneData={ applePhones }/>
                 <ProductsSection settings={ settings } title="Samsung" phoneData={ samsungPhones }/>
                 <ProductsSection settings={ settings } title="Honor" phoneData={ honorPhones }/>
+                <button className="hp-store-button"><img src={ LogoStore } alt=""/></button>
                 <footer className="hp-footer">
                     <p>Contacts: +7 (911) 555-55-55</p>
                 </footer>

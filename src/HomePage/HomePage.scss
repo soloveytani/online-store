@@ -135,3 +135,19 @@
         font-weight: bold;
     }
 }
+
+.hp-store-button {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    border-radius: 50%;
+    padding: 14px;
+    outline: none;
+    border: none;
+    background-color: #ca4733;
+    cursor: pointer;
+    img {
+        height: 32px;
+        width: 32px;
+    }
+}
